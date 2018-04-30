@@ -10,6 +10,7 @@ import { SignInComponent } from './autorization/sign-in/sign-in.component';
 import { SignUpComponent } from './autorization/sign-up/sign-up.component';
 import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
+import { MainDirective } from './main/main.directive';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { FooterComponent } from './footer/footer.component';
     SignInComponent,
     SignUpComponent,
     MainComponent,
-    FooterComponent
+    FooterComponent,
+    MainDirective
   ],
   imports: [
     BrowserModule,

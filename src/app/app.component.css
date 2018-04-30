@@ -1,0 +1,17 @@
+.componentsContainer {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+    flex-direction: column;
+	min-height: 100vh;
+}
+
+.header, .footer {
+	flex: 0;
+}
+
+.main {
+	flex: 1;
+}

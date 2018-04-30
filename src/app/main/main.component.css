@@ -1,0 +1,7 @@
+.main {
+    background-color: gray;
+    height: 300px;
+    color: white;
+    transition: all 2s ease;
+    text-align: center;
+}
