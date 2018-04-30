@@ -7,10 +7,8 @@ export class MainDirective {
 
   heightOn = "70vh";
   heightOut = "300px";
-  displayOn = "none";
 
   @HostBinding('style.height') height: string;
-  @HostBinding('style.display') display: string;
 
   ngOnInit() {
     // this.renderer.setStyle(this.elementRef.nativeElement, "background", "green");
@@ -19,13 +17,12 @@ export class MainDirective {
 
  constructor( private elementRef: ElementRef, private renderer: Renderer2 ) { }
 
- @HostListener('click') newColor() {
-  this.height = this.heightOn;
-  this.display = this.displayOn;
- }
+//  @HostListener('click') newColor() {
+//   this.height = this.heightOn;
+//  }
 
- @HostListener('mouseleave') newColor2() {
-  this.height = this.heightOut;
- }
+//  @HostListener('mouseleave') newColor2() {
+//   this.height = this.heightOut;
+//  }
 
 }

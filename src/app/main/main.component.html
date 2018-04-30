@@ -1,3 +1,21 @@
-<div class="main" appMain>
-  <button type="button" class="btn btn-success" (click)="doThing($event)">Button</button>
+<div class="main">
+  <p>main works!</p>
+
+ <div class="main-top" (mouseenter) = "informationFieldShow()"
+                       (mouseleave) = "informationFieldClose()"
+                       (click) = "informationFieldInfChange()"
+                       (click)="newHeight = !newHeight"
+                       appMain>
+
+  <div class="informationField" *ngIf = "isShow">
+    <h3>{{toInf}}</h3> 
+  </div>
+
+ </div>
+ <div class="main-top-details" [style.height]="setNewHeight()"
+                               (click)="newHeight = !newHeight"
+                               (mouseenter) = "informationFieldShow2()">
+   vfvdvr
+ </div>
+
 </div>
