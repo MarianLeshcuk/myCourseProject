@@ -7,8 +7,10 @@ export class MainDirective {
 
   heightOn = "70vh";
   heightOut = "300px";
+  displayOn = "none";
 
   @HostBinding('style.height') height: string;
+  @HostBinding('style.display') display: string;
 
   ngOnInit() {
     // this.renderer.setStyle(this.elementRef.nativeElement, "background", "green");
@@ -19,6 +21,7 @@ export class MainDirective {
 
  @HostListener('click') newColor() {
   this.height = this.heightOn;
+  this.display = this.displayOn;
  }
 
  @HostListener('mouseleave') newColor2() {
