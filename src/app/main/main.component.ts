@@ -9,9 +9,9 @@ export class MainComponent implements OnInit {
 
   isShow: boolean = false;
 
-  toInfOpen: string = "Click To View More";
-  toInfClose: string = "Click To Close";
-  toInf: string = "";
+  textOpen: string = "Open";
+  textClose: string = "Close";
+  text: string = "Open";///*ngFor!!!???
 
   newHeight: false;
 
@@ -22,28 +22,18 @@ export class MainComponent implements OnInit {
 
   informationFieldShow() {
     this.isShow = true;
-    this.toInf = this.toInfOpen;
-  }
-
-  informationFieldClose() {
-    this.isShow = false;
-  }
-
-  informationFieldInfChange() {
-    this.toInf = this.toInfClose;
   }
 
   setNewHeight() {
     if(this.newHeight) {
-      return "150px";
+      return "300px";
     } else {
       return "";
     }
   }
 
-  informationFieldShow2() {
-    this.isShow = true;
-    this.toInf = this.toInfClose;
+  newTextVal() {
+    this.text = this.textClose;
   }
 
 }

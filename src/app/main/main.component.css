@@ -1,19 +1,46 @@
 .main-top {
-    background-color: gray;
-    height: 300px;
+     height: 200px; /* auto */
     color: white;
     transition: all 2s ease;
-    text-align: center;
+    /* text-align: center; */
+    /* background-color: #222222; */
+    background-image: url(https://www.exchangechambers.co.uk/wp-content/uploads/2017/04/shutterstock_398377882_web-1200x200.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
-.informationField {
-    width: 100%;
-    height: 30px;
-    background-color: black;
+.main-top i {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+}
+
+.main-top button {
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
+    background-color: inherit;
+    color: #222222;
+    padding: 5px 15px;
+    border: 1px solid #222222;
+    border-radius: 20px;
+}
+.main-top button:hover {
+    box-shadow: 1px 1px 2px #40B1FA, 0 0 25px #40B1FA, 0 0 5px #40B1FA;
+}
+.main-top button:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+.fab:hover {
+    text-shadow: 1px 1px 2px #40B1FA, 0 0 25px #40B1FA, 0 0 5px #40B1FA;
+    cursor: pointer;
 }
 
 .main-top-details {
-    background-color: darkgrey;
+    background-color: #222222;
     height: 0px;
     color: white;
     transition: all 2s ease;

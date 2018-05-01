@@ -1,21 +1,18 @@
 <div class="main">
   <p>main works!</p>
 
- <div class="main-top" (mouseenter) = "informationFieldShow()"
-                       (mouseleave) = "informationFieldClose()"
-                       (click) = "informationFieldInfChange()"
-                       (click)="newHeight = !newHeight"
-                       appMain>
-
-  <div class="informationField" *ngIf = "isShow">
-    <h3>{{toInf}}</h3> 
-  </div>
-
+ <div class="main-top">
+    <br>
+    <i class="fab fa-earlybirds fa-7x"></i>
+    <br>
+    <button (click)="newHeight = !newHeight" (click) = "newTextVal()">{{text}}</button>
  </div>
- <div class="main-top-details" [style.height]="setNewHeight()"
-                               (click)="newHeight = !newHeight"
-                               (mouseenter) = "informationFieldShow2()">
-   vfvdvr
+ <div class="main-top-details" [style.height]="setNewHeight()">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quod ratione cum in possimus! Commodi, voluptatum voluptas? Aperiam consequatur optio impedit aliquid veniam, doloremque ex hic autem consectetur voluptates exercitationem.
+ </div>
+
+ <div class="main-center">
+   <p>main center works!</p>
  </div>
 
 </div>
