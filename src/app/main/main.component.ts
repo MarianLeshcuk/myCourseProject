@@ -11,7 +11,7 @@ export class MainComponent implements OnInit {
 
   textOpen: string = "Open";
   textClose: string = "Close";
-  text: string = "Open";///*ngFor!!!???
+  text: string = "Open";
 
   newHeight: false;
 
@@ -33,7 +33,11 @@ export class MainComponent implements OnInit {
   }
 
   newTextVal() {
-    this.text = this.textClose;
+    if(this.text === "Open") {
+      this.text = "Close"
+    } else {
+      this.text = "Open"
+    }
   }
 
 }
