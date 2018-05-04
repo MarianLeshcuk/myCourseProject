@@ -12,7 +12,7 @@ import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainDirective } from './main/main.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatTabsModule, MatCardModule, MatIconModule, MatGridListModule } from '@angular/material';
+import { MatGridListModule, MatButtonModule } from '@angular/material';
 
 
 @NgModule({
@@ -30,10 +30,8 @@ import { MatTabsModule, MatCardModule, MatIconModule, MatGridListModule } from '
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatCardModule,
-    MatTabsModule,
-    MatIconModule,
-    MatGridListModule
+    MatGridListModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

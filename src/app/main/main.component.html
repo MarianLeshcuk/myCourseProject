@@ -1,50 +1,15 @@
 <div class="main">
-  <p>main works!</p>
 
  <div class="main-top">
-    <p>Hello World!</p>
-    <button (click)="newHeight = !newHeight" (click)="newDisplay = !newDisplay" (click) = "newTextVal()">{{text}}</button>
+    <p id="Logo" [@movePanel]='state'>Hello World!</p>
+    <!-- <button [@movePanel]='state' (click) = "newTextVal()" (click)="newStateClick()">{{text}}</button> -->
+    <button mat-raised-button  [@movePanel]='state' (click) = "newTextVal()" (click)="newStateClick()">{{text}}</button>
  </div>
- <div class="main-top-details" [style.height]="setNewHeight()">
-  <mat-card [style.display]="setNewDisplay()">
-    <mat-card-content>
-      <h2 class="example-h2">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo rem commodi, voluptate dolorum soluta et blanditiis, cupiditate placeat mollitia deserunt unde dolores natus esse fugit temporibus cumque aspernatur ea quidem!
-      </h2>
-      <mat-tab-group class="demo-tab-group">
-        <mat-tab label="Tab 1">
-          <div class="demo-tab-content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
-            Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
-            In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec,
-            feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor,
-            orci enim rutrum enim, vel tempor sapien arcu a tellus.
-          </div>
-        </mat-tab>
-        <mat-tab label="Tab 2">
-          <div class="demo-tab-content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
-            Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
-            In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec,
-            feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor,
-            orci enim rutrum enim, vel tempor sapien arcu a tellus.
-          </div>  
-        </mat-tab>
-        <mat-tab label="Tab 4">
-          <div class="demo-tab-content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
-            Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
-            In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec,
-            feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor,
-            orci enim rutrum enim, vel tempor sapien arcu a tellus.
-          </div>  
-        </mat-tab>
-      </mat-tab-group>
-    </mat-card-content>
-  </mat-card>
+ <div class="main-top-details" [@focusPanel]='state'>
+    
  </div>
 
- <div class="main-center">
+ <div class="main-center" style="background-color: #222222">
     <mat-grid-list cols="4" rowHeight="100px">
         <mat-grid-tile
             *ngFor="let tile of tiles"
@@ -52,6 +17,7 @@
             [rowspan]="tile.rows"
             [style.background]="tile.color">
           {{tile.text}}
+          <button mat-raised-button>View More</button>
         </mat-grid-tile>
     </mat-grid-list>
  </div>

@@ -10,7 +10,15 @@
     position: relative;
 }
 
-.main-top button {
+.main-top p {
+    font-size: 40px;
+    font-family: 'Varela Round', sans-serif;
+    text-align: center;
+    padding-top: 70px;
+    color: #40B1FA;
+}
+
+/* .main-top button {
     position: absolute;
     bottom: 50px;
     right: 100px;
@@ -26,6 +34,12 @@
 .main-top button:active, :hover, :focus {
     outline: 0;
     outline-offset: 0;
+} */
+.main-top button {
+    position: absolute;
+    bottom: 30px;
+    right: 60px;
+    color: #222222;
 }
 
 .fab:hover {
@@ -39,6 +53,13 @@
     color: white;
     transition: all 2s ease;
     text-align: center;
+}
+.main-center button {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background-color: #222222;
+    color: white;
 }
 
 .main-bottom {
