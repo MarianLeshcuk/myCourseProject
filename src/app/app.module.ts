@@ -11,6 +11,8 @@ import { SignUpComponent } from './autorization/sign-up/sign-up.component';
 import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainDirective } from './main/main.directive';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTabsModule, MatCardModule, MatIconModule, MatGridListModule } from '@angular/material';
 
 
 @NgModule({
@@ -26,7 +28,12 @@ import { MainDirective } from './main/main.directive';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatTabsModule,
+    MatIconModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,19 +1,13 @@
 .main-top {
-     height: 200px; /* auto */
+    height: 200px; /* auto */
     color: white;
     transition: all 2s ease;
     /* text-align: center; */
-    /* background-color: #222222; */
-    background-image: url(https://www.exchangechambers.co.uk/wp-content/uploads/2017/04/shutterstock_398377882_web-1200x200.jpg);
+    background-color: #222222;
+    /* background-image: url(https://www.exchangechambers.co.uk/wp-content/uploads/2017/04/shutterstock_398377882_web-1200x200.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-}
-
-.main-top i {
-    position: absolute;
-    top: 20px;
-    left: 40px;
 }
 
 .main-top button {
@@ -21,9 +15,9 @@
     bottom: 50px;
     right: 100px;
     background-color: inherit;
-    color: #222222;
+    color: white;
     padding: 5px 15px;
-    border: 1px solid #222222;
+    border: 1px solid white;
     border-radius: 20px;
 }
 .main-top button:hover {
@@ -45,4 +39,24 @@
     color: white;
     transition: all 2s ease;
     text-align: center;
+}
+
+.main-bottom {
+    height: 600px; /* auto */
+    color: white;
+    transition: all 2s ease;
+    /* text-align: center; */
+    background-color: #222222;
+    /* background-image: url(https://digileaders.com/wp-content/uploads/2016/03/DA-Ransbotham-Blockchain-Data-Storage-Business-Model-Bitcoin-1200-1200x627-1200x600.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+ 
+.demo-tab-content {
+    padding: 16px;
+}
+
+.mat-card {
+    padding: 20px;
 }

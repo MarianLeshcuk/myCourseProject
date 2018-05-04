@@ -7,13 +7,20 @@ import { Component, OnInit, HostBinding, HostListener } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
+  tiles = [
+    {text: 'One', cols: 3, rows: 1, color: 'lightblue'},
+    {text: 'Two', cols: 1, rows: 2, color: 'lightgreen'},
+    {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
+    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
+  ];
+
   isShow: boolean = false;
 
-  textOpen: string = "Open";
-  textClose: string = "Close";
   text: string = "Open";
 
   newHeight: false;
+
+  newDisplay: true;
 
   constructor() { }
 
@@ -26,7 +33,7 @@ export class MainComponent implements OnInit {
 
   setNewHeight() {
     if(this.newHeight) {
-      return "300px";
+      return "400px";// auto
     } else {
       return "";
     }
@@ -37,6 +44,14 @@ export class MainComponent implements OnInit {
       this.text = "Close"
     } else {
       this.text = "Open"
+    }
+  }
+
+  setNewDisplay() {
+    if(this.newDisplay) {
+      return "block";
+    } else {
+      return "none";
     }
   }
 
