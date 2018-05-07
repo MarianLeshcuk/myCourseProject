@@ -1,10 +1,8 @@
 .main-top {
-    height: 200px; /* auto */
+    height: auto;
     color: white;
     transition: all 2s ease;
-    /* text-align: center; */
     background-color: #222222;
-    /* background-image: url(https://www.exchangechambers.co.uk/wp-content/uploads/2017/04/shutterstock_398377882_web-1200x200.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -14,27 +12,19 @@
     font-size: 40px;
     font-family: 'Varela Round', sans-serif;
     text-align: center;
-    padding-top: 70px;
+    padding-top: 30px;
     color: #40B1FA;
 }
 
-/* .main-top button {
-    position: absolute;
-    bottom: 50px;
-    right: 100px;
-    background-color: inherit;
-    color: white;
-    padding: 5px 15px;
-    border: 1px solid white;
-    border-radius: 20px;
+.main-top h5 {
+    font-size: 20px;
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 80px;
+    margin: 0px;
 }
-.main-top button:hover {
-    box-shadow: 1px 1px 2px #40B1FA, 0 0 25px #40B1FA, 0 0 5px #40B1FA;
-}
-.main-top button:active, :hover, :focus {
-    outline: 0;
-    outline-offset: 0;
-} */
+
 .main-top button {
     position: absolute;
     bottom: 30px;
@@ -54,6 +44,14 @@
     transition: all 2s ease;
     text-align: center;
 }
+.main-top-details p {
+    font-size: 20px;
+    text-align: left;
+    padding: 15px;
+    margin: 0px;
+    clear: both;
+}
+
 .main-center button {
     position: absolute;
     right: 20px;
@@ -63,15 +61,19 @@
 }
 
 .main-bottom {
-    height: 600px; /* auto */
+    height: auto;
     color: white;
     transition: all 2s ease;
-    /* text-align: center; */
     background-color: #222222;
-    /* background-image: url(https://digileaders.com/wp-content/uploads/2016/03/DA-Ransbotham-Blockchain-Data-Storage-Business-Model-Bitcoin-1200-1200x627-1200x600.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+}
+.main-bottom h2, h3, p {
+    margin: 0px;
+}
+.main-bottom h2, h3 {
+    text-align: center;
 }
  
 .demo-tab-content {
@@ -81,3 +83,10 @@
 .mat-card {
     padding: 20px;
 }
+
+
+.item-card {
+    max-width: 300px;
+    display: inline-block;
+    float: left;
+  }

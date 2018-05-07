@@ -12,7 +12,9 @@ import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainDirective } from './main/main.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatGridListModule, MatButtonModule } from '@angular/material';
+import { MatGridListModule, MatButtonModule, MatCardModule } from '@angular/material';
+import { ChatComponent } from './main/chat/chat.component';
+import { RoleGuard } from './services/autorization.service';
 
 
 @NgModule({
@@ -24,16 +26,18 @@ import { MatGridListModule, MatButtonModule } from '@angular/material';
     SignUpComponent,
     MainComponent,
     FooterComponent,
-    MainDirective
+    MainDirective,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatGridListModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule
   ],
-  providers: [],
+  providers: [RoleGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

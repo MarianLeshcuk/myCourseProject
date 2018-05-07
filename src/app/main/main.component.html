@@ -1,12 +1,30 @@
 <div class="main">
 
  <div class="main-top">
-    <p id="Logo" [@movePanel]='state'>Hello World!</p>
-    <!-- <button [@movePanel]='state' (click) = "newTextVal()" (click)="newStateClick()">{{text}}</button> -->
-    <button mat-raised-button  [@movePanel]='state' (click) = "newTextVal()" (click)="newStateClick()">{{text}}</button>
+    <p id="Logo">Welcome to Larson Building Company</p>
+    <h5>At Larson Building Company we believe in providing you the highest standards of excellence, elegance, and quality construction in your new Kansas City home.  As a Kansas City custom home builder, we've had the honor of building several homes for our Kansas City neighbors and were recently awarded the "Pick of the Parade Grand Award Winner" from the KC Home Builders Association for 2016.  We invite you to come see how we are redefining the standard of excellence in the Kansas City housing market and how we can find you your perfect new home.</h5>
+    <button mat-raised-button  [@moveMainTopContent]='state' (click) = "newTextVal()" (click)="mainTopContentAnimation()">{{text}}</button>
  </div>
- <div class="main-top-details" [@focusPanel]='state'>
-    
+ <div class="main-top-details" [@focusMainTopContent]='state'>
+    <h2 style="margin: 0px" [@focusMainTopDetailsContent]='state' style="color: #40B1FA; margin: 0px;">We build on trust.</h2>
+    <br>
+    <p>McDonald Building Co. is a full-service project management firm providing reliable solutions to construction challenges. Our clients depend on us to turn their vision into reality and along the way we champion their goals, protect their best interests and guide them to success.</p>
+    <p>During the course of this project, we found the construction team and subcontractors to be reliable, professional, and with extreme attention to detail.
+       <br><span style="padding-left: 50px">— Brian K. Friedman, AMC Delancey Group, Inc</span></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  </div>
 
  <div class="main-center" style="background-color: #222222">
@@ -15,18 +33,46 @@
             *ngFor="let tile of tiles"
             [colspan]="tile.cols"
             [rowspan]="tile.rows"
-            [style.background]="tile.color">
+            [style.background]="tile.color"
+            [style.background-image]="tile.url"
+            [style.background-repeat]="tile.repeat"
+            [style.background-size]="tile.size">
           {{tile.text}}
-          <button mat-raised-button>View More</button>
         </mat-grid-tile>
     </mat-grid-list>
  </div>
 
  <div class="main-bottom">
-  <p>main bottom works!</p>
- </div>
+  <h2>Our Mission</h2>
+  <p>Bradford Building Company, Inc. believes that values make all the difference in the marketplace. Our goal is to bring Integrity, Experience, Commitment, and Honor to the table for all of our dealings. </p>
+  <h3>INTEGRITY</h3>
+  <p>Integrity is the most important focus for Bradford Building Company.  Nothing is more important than honesty.</p>
+  <h3>EXPERIENCE</h3>
+  <p>Our experience allows us to ensure that every project we manage is a planned and efficient endeavor. Nothing is wasted including our customers’ time or investment.</p>
+ 
 
+  <div class="div" *ngFor = "let item of items">
+    <mat-card class="item-card">
+     <mat-card-header>
+       <mat-card-title>{{item.title}}</mat-card-title>
+       <mat-card-subtitle>{{item.price}}</mat-card-subtitle>
+     </mat-card-header>
+     <img mat-card-image [src] = "item.imageSrc">
+     <mat-card-content>
+       <p>{{item.description}}</p>
+     </mat-card-content>
+     <mat-card-actions>
+       <button mat-button>Add to bag</button>
+       <button mat-button (click) = "openDetails()">Details</button>
+     </mat-card-actions>
+   </mat-card>
 </div>
 
 
-<!-- https://www.npmjs.com/package/ng2-page-slider -->
+</div>
+
+ 
+
+ <router-outlet name="chat"></router-outlet>
+
+</div>

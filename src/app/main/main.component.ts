@@ -1,5 +1,6 @@
 import { Component, OnInit, HostBinding, HostListener } from '@angular/core';
 import { trigger, state, style, transition, animate, keyframes } from '@angular/core';
+import { Item } from '../models/item.model';
 
 
 @Component({
@@ -8,7 +9,7 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
   styleUrls: ['./main.component.css'],
   animations: [
   
-    trigger('movePanel', [    
+    trigger('moveMainTopContent', [    
         transition('void => *', [
             animate(600, keyframes([
                 style({opacity: 0, transform: 'translateY(-200px)', offset: 0}),
@@ -18,12 +19,12 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
         ]),
     ]),
 
-  trigger('focusPanel', [
+  trigger('focusMainTopContent', [
     state('inactive', style({
         height: '0px'
     })),
     state('active', style({
-      height: '300px'
+      height: '50vh'
     })),
     transition('inactive => active', animate('1.5s ease-out')),
     transition('active => inactive', animate('1.5s ease-in'))
@@ -34,36 +35,27 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
 export class MainComponent implements OnInit {
 
   tiles = [
-    {text: 'One', cols: 3, rows: 2, color: '#fff'},
-    {text: 'Two', cols: 1, rows: 3, color: '#40B1FA'},
-    {text: 'Three', cols: 1, rows: 1, color: '#40B1FA'},
-    {text: 'Four', cols: 2, rows: 1, color: '#fff'},
+    {text: '', cols: 3, rows: 2, color: '#fff', url: "url(http://www.servcorp.com.sa/media/14532/banner-module-building-al-murjanah-tower-1500x500.jpg)", repeat: "no-repeat", size: "cover"},
+    {text: '', cols: 1, rows: 3, color: '#40B1FA', url: "url(http://www.universaltaxation.com.au/wp-content/uploads/2016/06/buslodge500X500.jpg)", repeat: "no-repeat", size: "cover"},
+    {text: '', cols: 1, rows: 1, color: '#40B1FA', url: "url(https://i.warosu.org/data/biz/img/0079/21/1519472652996.jpg)", repeat: "no-repeat", size: "cover"},
+    {text: '', cols: 2, rows: 1, color: '#fff', url: "url(http://www.tati.in/images/sub_banner.jpg)", repeat: "no-repeat", size: "cover"},
   ];
 
-  // isShow: boolean = false;
+  // @Input()
+  item: Item;
+
+  items: Item[] = [
+    new Item("Title", "Desc", 300, "https://d1yupijb0jmhpf.cloudfront.net/72ef796c-ef3c-4067-adef-f10549d5707c.png"),
+    new Item("Title", "Desc", 300, "https://d1yupijb0jmhpf.cloudfront.net/72ef796c-ef3c-4067-adef-f10549d5707c.png"),
+    new Item("Title", "Desc", 300, "https://d1yupijb0jmhpf.cloudfront.net/72ef796c-ef3c-4067-adef-f10549d5707c.png")
+]
 
   text: string = "Open";
-
-  // newHeight: false;
-
-  // newDisplay: true;
 
   constructor() { }
 
   ngOnInit() {
   }
-
-  // informationFieldShow() {
-  //   this.isShow = true;
-  // }
-
-  // setNewHeight() {
-  //   if(this.newHeight) {
-  //     return "400px";// auto
-  //   } else {
-  //     return "";
-  //   }
-  // }
 
   newTextVal() {
     if(this.text === "Open") {
@@ -73,17 +65,9 @@ export class MainComponent implements OnInit {
     }
   }
 
-  // setNewDisplay() {
-  //   if(this.newDisplay) {
-  //     return "block";
-  //   } else {
-  //     return "none";
-  //   } 
-  // }
-
   state: string = 'inactive';
 
-  newStateClick() {
+  mainTopContentAnimation() {
     this.state = (this.state === 'inactive' ? 'active' : 'inactive');
   }
 
