@@ -1,0 +1,17 @@
+.cabinet {
+    background-color: #40B1FA;
+    height: auto;
+}
+
+.exitButton {
+    color: #40B1FA;
+    margin: 10px;
+}
+
+h2 {
+    margin: 15px 0;
+}
+
+.row {
+    padding: 10px;
+}

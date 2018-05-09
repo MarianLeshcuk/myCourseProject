@@ -1,11 +1,20 @@
+<div>
 <div class="input-group">
   <span class="input-group-addon" style="width: 25%">Login</span>
-  <input type="text" placeholder="enter your login..." class="form-control" aria-label="Amount (to the nearest dollar)">
+  <input type="text" placeholder="enter your login..."
+                     class="form-control"
+                     aria-label="Amount (to the nearest dollar)"
+                     [(ngModel)] = "login" required>
 </div>
 
 <div class="input-group">
   <span class="input-group-addon" style="width: 25%">Password</span>
-  <input type="text" placeholder="enter your password..." class="form-control" aria-label="Amount (to the nearest dollar)">
+  <input type="text" placeholder="enter your password..."
+                     class="form-control"
+                     aria-label="Amount (to the nearest dollar)"
+                     [(ngModel)] = "password" required>
 </div>
 
-<button type="button" class="btn btn-default">Sign In</button>
+<button type="button" class="btn btn-default"
+                      (click) = "addElementToConsole()">Sign In</button>
+</div>

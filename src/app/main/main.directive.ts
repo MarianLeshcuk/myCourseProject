@@ -5,10 +5,10 @@ import { Directive, ElementRef, Renderer2, HostBinding, HostListener } from '@an
 })
 export class MainDirective {
 
-  heightOn = "70vh";
-  heightOut = "300px";
+  // heightOn = "70vh";
+  // heightOut = "300px";
 
-  @HostBinding('style.height') height: string;
+  // @HostBinding('style.height') height: string;
 
   ngOnInit() {
     // this.renderer.setStyle(this.elementRef.nativeElement, "background", "green");

@@ -1,31 +1,34 @@
 <div class="main">
 
  <div class="main-top">
-    <p id="Logo">Welcome to Larson Building Company</p>
-    <h5>At Larson Building Company we believe in providing you the highest standards of excellence, elegance, and quality construction in your new Kansas City home.  As a Kansas City custom home builder, we've had the honor of building several homes for our Kansas City neighbors and were recently awarded the "Pick of the Parade Grand Award Winner" from the KC Home Builders Association for 2016.  We invite you to come see how we are redefining the standard of excellence in the Kansas City housing market and how we can find you your perfect new home.</h5>
-    <button mat-raised-button  [@moveMainTopContent]='state' (click) = "newTextVal()" (click)="mainTopContentAnimation()">{{text}}</button>
+    <p id="Logo" [@moveMainTopContent]='state'>Welcome to Building Company</p>
+    <h5 [@moveMainTopContent]='state'>At our Building Company we believe in providing you the highest standards of excellence, elegance, and quality construction in your new Kansas City home.  As a Kansas City custom home builder, we've had the honor of building several homes for our Kansas City neighbors and were recently awarded the "Pick of the Parade Grand Award Winner" from the KC Home Builders Association for 2016.  We invite you to come see how we are redefining the standard of excellence in the Kansas City housing market and how we can find you your perfect new home.</h5>
+    <button mat-raised-button  [@moveMainTopContent]='state'
+                               (click) = "newTextVal()"
+                               (click)="mainTopContentAnimation()">{{text}}</button>
  </div>
  <div class="main-top-details" [@focusMainTopContent]='state'>
-    <h2 style="margin: 0px" [@focusMainTopDetailsContent]='state' style="color: #40B1FA; margin: 0px;">We build on trust.</h2>
+    <h2 [@focusMainTopDetailsContent]='state'>We build on trust</h2>
     <br>
-    <p>McDonald Building Co. is a full-service project management firm providing reliable solutions to construction challenges. Our clients depend on us to turn their vision into reality and along the way we champion their goals, protect their best interests and guide them to success.</p>
+    <p>Building Company is a full-service project management firm providing reliable solutions to construction challenges. Our clients depend on us to turn their vision into reality and along the way we champion their goals, protect their best interests and guide them to success.</p>
     <p>During the course of this project, we found the construction team and subcontractors to be reliable, professional, and with extreme attention to detail.
        <br><span style="padding-left: 50px">— Brian K. Friedman, AMC Delancey Group, Inc</span></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- </div>
+    <h2>Services & Methods</h2>
+    <br>
+    <h3>Building Services</h3>
+    <p>As a full-service construction management firm, MBC provides a complete menu of services from the earliest planning stages right through to final project closeout.  No two projects are remotely the same.  We tailor our services and teams to meet your project goals and budget, providing the highest level of service in the most efficient manner.</p>
+    <br>
+    <p>The most important service we provide is peace of mind.   Peace of mind knowing we are accustomed to the permitting and approval process and that we will keep your project on track and on budget.   For a more detailed description of each service listed below, please don’t hesitate to contact us.</p>
+    <h3>Delivery Methods</h3>
+    <p>Choosing the right delivery method for your project is critical to meeting your project objectives.  MBC has worked with clients using most of the standard construction industry delivery methods and is well versed in the details of all of them.  If you would like to discuss the various delivery methods in more detail, please feel free to contact us. </p>
+    <br>
+    <h2>Safety</h2>
+    <p>We take safety seriously. Nothing is more important than the safety, health, and well-being of our employees and the people who surround our projects – subcontractors, owners, users and the public.</p>
+    <p>Our safety goal is zero injuries and no lost time accidents. We take pride in our regional network of certified subcontractors who hold exceptional safety ratings and we create site-specific safety plans taking into account the unique aspects of each project.</p>
+    <p>Our safety program teaches employees and subcontractors to take action to protect
+      themselves and others, correct potentially unsafe behaviors, and adopt a mindset of proactively
+      choosing to follow safety rules. The program includes a full range of ongoing initiatives, including training for new employees, job site-specific safety programs, weekly toolbox meetings, and regular safety audits.</p>
+</div>
 
  <div class="main-center" style="background-color: #222222">
     <mat-grid-list cols="4" rowHeight="100px">
@@ -43,36 +46,30 @@
  </div>
 
  <div class="main-bottom">
-  <h2>Our Mission</h2>
-  <p>Bradford Building Company, Inc. believes that values make all the difference in the marketplace. Our goal is to bring Integrity, Experience, Commitment, and Honor to the table for all of our dealings. </p>
-  <h3>INTEGRITY</h3>
-  <p>Integrity is the most important focus for Bradford Building Company.  Nothing is more important than honesty.</p>
-  <h3>EXPERIENCE</h3>
-  <p>Our experience allows us to ensure that every project we manage is a planned and efficient endeavor. Nothing is wasted including our customers’ time or investment.</p>
- 
 
-  <div class="div" *ngFor = "let item of items">
-    <mat-card class="item-card">
+  <h4>Our Mission</h4>
+  <p>Bradford Building Company, Inc. believes that values make all the difference in the marketplace. Our goal is to bring Integrity, Experience, Commitment, and Honor to the table for all of our dealings. </p>
+  <h4>INTEGRITY</h4>
+  <p>Integrity is the most important focus for Bradford Building Company.  Nothing is more important than honesty.</p>
+  <h4>EXPERIENCE</h4>
+  <p>Our experience allows us to ensure that every project we manage is a planned and efficient endeavor. Nothing is wasted including our customers’ time or investment.</p>
+  <h4>OUR WORKS</h4>
+
+<div class="main-buttom-items" *ngFor = "let item of items">
+   <mat-card class="item-card">
      <mat-card-header>
        <mat-card-title>{{item.title}}</mat-card-title>
-       <mat-card-subtitle>{{item.price}}</mat-card-subtitle>
      </mat-card-header>
-     <img mat-card-image [src] = "item.imageSrc">
+     <img mat-card-image [src] = "item.imageSrc" style="width: 250px; height: 250px;">
      <mat-card-content>
        <p>{{item.description}}</p>
      </mat-card-content>
      <mat-card-actions>
-       <button mat-button>Add to bag</button>
-       <button mat-button (click) = "openDetails()">Details</button>
+       <button mat-button>View More</button>
      </mat-card-actions>
    </mat-card>
 </div>
 
-
 </div>
-
- 
-
- <router-outlet name="chat"></router-outlet>
 
 </div>

@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignInComponent implements OnInit {
 
+  login: string;
+  password: string;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  addElementToConsole() {
+    if((this.login === 'admin') && (this.password === '123')){
+    console.log("connected");
+    alert('connected');
+    localStorage.setItem('token', JSON.stringify({ login: this.login, password: this.password }));
+   } else {
+     alert('error');
+   }
   }
 
 }
