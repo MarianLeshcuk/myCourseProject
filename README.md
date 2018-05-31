@@ -25,3 +25,11 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+
+## About this project
+
+This is the site of a construction company.
+The site contains a description of the company, registration and logging in to enter your personal office. The cabin can be booked in advance.
+The site contains a list of the best projects of this company and the possibility of sending a message with questions without prior authorization.
